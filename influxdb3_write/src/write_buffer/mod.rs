@@ -165,7 +165,7 @@ impl<W: Wal> WriteBufferImpl<W> {
         accept_partial: bool,
         precision: Precision,
     ) -> Result<ValidationResult> {
-        let (sequence, db) = self.catalog.db_or_create(db_name.as_str());
+        let (sequence, db) = self.catalog.db_or_create(db_name.as_str())?;
         let mut result = parse_validate_and_update_schema(
             lp,
             &db,

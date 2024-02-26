@@ -34,6 +34,13 @@ impl Default for Catalog {
 }
 
 impl Catalog {
+    /// Limit for the number of Databases that InfluxDB Edge can have
+    pub(crate) const NUM_DB_LIMIT: usize = 5;
+    /// Limit for the number of columns per table that InfluxDB Edge can have
+    pub(crate) const NUM_COLUMNS_PER_TABLE_LIMIT: usize = 500;
+    // Limit for the number of tables across all DBs that InfluxDB Edge can have
+    pub(crate) const NUM_TABLES_LIMIT: usize = 2000;
+
     pub fn new() -> Self {
         Self {
             inner: RwLock::new(InnerCatalog::new()),
@@ -57,15 +64,36 @@ impl Catalog {
             return Err(Error::CatalogUpdatedElsewhere);
         }
 
-        info!("inserted/updated database in catalog: {}", db.name);
+        // Check we havenot gone over the table limit with this updated DB
+        let mut num_tables = inner
+            .databases
+            .iter()
+            .filter(|(k, _)| *k != &db.name)
+            .map(|(_, v)| v)
+            .fold(0, |acc, db| acc + db.tables.len());
 
+        num_tables += db.tables.len();
+
+        if num_tables > Self::NUM_TABLES_LIMIT {
+            todo!("Updating the schema would mean we have way to many tables");
+        }
+
+        for table in db.tables.values() {
+            if table.columns.len() > Self::NUM_COLUMNS_PER_TABLE_LIMIT {
+                todo!("Updating the schema would mean we have to many columns per table");
+            }
+        }
+
+        info!("inserted/updated database in catalog: {}", db.name);
         inner.sequence = inner.sequence.next();
         inner.databases.insert(db.name.clone(), db);
-
         Ok(())
     }
 
-    pub(crate) fn db_or_create(&self, db_name: &str) -> (SequenceNumber, Arc<DatabaseSchema>) {
+    pub(crate) fn db_or_create(
+        &self,
+        db_name: &str,
+    ) -> Result<(SequenceNumber, Arc<DatabaseSchema>)> {
         let (sequence, db) = {
             let inner = self.inner.read();
             (inner.sequence, inner.databases.get(db_name).cloned())
@@ -79,13 +107,18 @@ impl Catalog {
             None => {
                 info!("return new db {}", db_name);
                 let mut inner = self.inner.write();
+
+                if inner.databases.len() >= Self::NUM_DB_LIMIT {
+                    todo!("You over the limit because adding more would be bad!")
+                }
+
                 let db = Arc::new(DatabaseSchema::new(db_name));
                 inner.databases.insert(db.name.clone(), Arc::clone(&db));
                 db
             }
         };
 
-        (sequence, db)
+        Ok((sequence, db))
     }
 
     pub fn db_schema(&self, name: &str) -> Option<Arc<DatabaseSchema>> {
