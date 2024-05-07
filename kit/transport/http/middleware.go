@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	"github.com/influxdata/influxdb/kit/platform"
 	"github.com/influxdata/influxdb/kit/platform/errors"
 	"github.com/influxdata/influxdb/kit/tracing"

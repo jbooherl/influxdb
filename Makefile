@@ -1,4 +1,4 @@
-export PKG_CONFIG=./pkg-config.sh
+export PKG_CONFIG:=$(shell pwd)/pkg-config.sh
 
 build:
 	go build ./...

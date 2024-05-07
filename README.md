@@ -20,6 +20,27 @@ events, and performing analytics.
   indexed as it comes in and is immediately available in queries that
   should return in < 100ms.
 
+## Building
+
+```
+  #Recommeneded GO PATH
+  export GOPATH="~/workspace/go"
+  export PATH=$PATH:/$GO_PATH/bin
+  
+  #Go Deps
+  brew install protobuf
+  go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+  go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+  go install github.com/benbjohnson/tmpl@latest
+  go install golang.org/x/tools/cmd/goimports@latest
+  go install golang.org/x/tools/cmd/stringer@latest
+  
+  #Generating code for Flux
+  export PKG_CONFIG="$(git rev-parse --show-toplevel)/pkg-config.sh"
+  go clean ./...
+  go install ./...
+  go generate ./...
+```
 ## Installation
 
 We recommend installing InfluxDB using one of the [pre-built packages](https://influxdata.com/downloads/#influxdb). Then start InfluxDB using:
