@@ -3,10 +3,10 @@ package influxdb
 import (
 	"fmt"
 
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/codes"
-	"github.com/influxdata/flux/plan"
-	"github.com/influxdata/flux/stdlib/influxdata/influxdb"
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/codes"
+	"github.com/InfluxCommunity/flux/plan"
+	"github.com/InfluxCommunity/flux/stdlib/influxdata/influxdb"
 )
 
 const FromKind = "influxDBFrom"

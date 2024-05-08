@@ -22,9 +22,9 @@ import (
 	"syscall"
 	"text/tabwriter"
 
-	"github.com/influxdata/flux"
-	csv2 "github.com/influxdata/flux/csv"
-	"github.com/influxdata/flux/values"
+	"github.com/InfluxCommunity/flux"
+	csv2 "github.com/InfluxCommunity/flux/csv"
+	"github.com/InfluxCommunity/flux/values"
 	"github.com/influxdata/influxdb/client"
 	fluxClient "github.com/influxdata/influxdb/flux/client"
 	v8 "github.com/influxdata/influxdb/importer/v8"

@@ -7,7 +7,7 @@ import (
 	"mime"
 	"net/http"
 
-	"github.com/influxdata/flux"
+	"github.com/InfluxCommunity/flux"
 	"github.com/influxdata/influxdb/flux/client"
 	"github.com/prometheus/client_golang/prometheus"
 )

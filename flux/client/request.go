@@ -7,9 +7,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/csv"
-	"github.com/influxdata/flux/lang"
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/csv"
+	"github.com/InfluxCommunity/flux/lang"
 	"github.com/influxdata/influxdb/query"
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"

@@ -10,7 +10,7 @@ log() {
 
 determine_flux_revision() {
   local version revision
-  version=$("$GO" list -m -f '{{.Version}}' github.com/influxdata/flux)
+  version=$("$GO" list -m -f '{{.Version}}' github.com/InfluxCommunity/flux)
   revision=$(printf "%s" "${version}" | cut -d- -f 3)
   if [[ ${revision} != "" ]]; then
     printf "%s\n" "${revision}"
@@ -23,7 +23,7 @@ download_flux_archive() {
   local revision
   revision=$(determine_flux_revision)
   log "Downloading flux archive (${revision})..."
-  curl -sLo flux.zip "https://github.com/influxdata/flux/archive/${revision}.zip"
+  curl -sLo flux.zip "https://github.com/InfluxCommunity/flux/archive/${revision}.zip"
 }
 
 build_test_harness() {

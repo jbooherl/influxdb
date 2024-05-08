@@ -3,9 +3,9 @@ package internal
 import (
 	"context"
 
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/memory"
-	"github.com/influxdata/flux/runtime"
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/memory"
+	"github.com/InfluxCommunity/flux/runtime"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

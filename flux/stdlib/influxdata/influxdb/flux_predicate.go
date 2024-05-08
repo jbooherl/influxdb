@@ -3,8 +3,8 @@ package influxdb
 import (
 	"fmt"
 
-	"github.com/influxdata/flux/ast"
-	"github.com/influxdata/flux/semantic"
+	"github.com/InfluxCommunity/flux/ast"
+	"github.com/InfluxCommunity/flux/semantic"
 	"github.com/influxdata/influxdb/models"
 	"github.com/influxdata/influxdb/storage/reads/datatypes"
 	"github.com/pkg/errors"

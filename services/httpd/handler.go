@@ -20,11 +20,11 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/lang"
 	"github.com/bmizerany/pat"
 	"github.com/golang-jwt/jwt"
 	"github.com/golang/snappy"
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/lang"
 	"github.com/influxdata/influxdb"
 	"github.com/influxdata/influxdb/logger"
 	"github.com/influxdata/influxdb/models"

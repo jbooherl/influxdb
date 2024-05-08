@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/influxdata/flux/interval"
-	"github.com/influxdata/flux/values"
+	"github.com/InfluxCommunity/flux/interval"
+	"github.com/InfluxCommunity/flux/values"
 	errors2 "github.com/influxdata/influxdb/kit/platform/errors"
 	"github.com/influxdata/influxdb/tsdb/cursors"
 )

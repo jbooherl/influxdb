@@ -4,9 +4,9 @@ import (
 	"container/list"
 	"sync"
 
+	"github.com/InfluxCommunity/flux/array"
+	"github.com/InfluxCommunity/flux/execute"
 	"github.com/apache/arrow/go/arrow/memory"
-	"github.com/influxdata/flux/array"
-	"github.com/influxdata/flux/execute"
 )
 
 // defaultMaxLengthForTagsCache is the default maximum number of

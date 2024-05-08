@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/dependencies"
-	"github.com/influxdata/flux/dependencies/http"
-	"github.com/influxdata/flux/dependencies/secret"
-	"github.com/influxdata/flux/dependencies/url"
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/dependencies"
+	"github.com/InfluxCommunity/flux/dependencies/http"
+	"github.com/InfluxCommunity/flux/dependencies/secret"
+	"github.com/InfluxCommunity/flux/dependencies/url"
 	"github.com/influxdata/influxdb/coordinator"
 )
 

@@ -3,7 +3,7 @@ package mock
 import (
 	"context"
 
-	"github.com/influxdata/flux/memory"
+	"github.com/InfluxCommunity/flux/memory"
 	"github.com/influxdata/influxdb/coordinator"
 	"github.com/influxdata/influxdb/flux/stdlib/influxdata/influxdb"
 )

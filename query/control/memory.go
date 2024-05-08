@@ -5,7 +5,7 @@ import (
 	"math"
 	"sync/atomic"
 
-	"github.com/influxdata/flux/memory"
+	"github.com/InfluxCommunity/flux/memory"
 )
 
 type memoryManager struct {

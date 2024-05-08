@@ -7,8 +7,8 @@
 package init
 
 import (
-	"github.com/influxdata/flux/runtime"
-	_ "github.com/influxdata/flux/stdlib"
+	"github.com/InfluxCommunity/flux/runtime"
+	_ "github.com/InfluxCommunity/flux/stdlib"
 	_ "github.com/influxdata/influxdb/flux/stdlib"
 )
 

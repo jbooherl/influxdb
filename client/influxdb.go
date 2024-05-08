@@ -18,8 +18,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/csv"
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/csv"
 	fluxClient "github.com/influxdata/influxdb/flux/client"
 	"github.com/influxdata/influxdb/models"
 )

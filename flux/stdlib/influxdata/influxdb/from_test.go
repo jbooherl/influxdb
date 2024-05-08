@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/plan"
-	"github.com/influxdata/flux/plan/plantest"
-	"github.com/influxdata/flux/stdlib/influxdata/influxdb"
-	"github.com/influxdata/flux/stdlib/universe"
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/plan"
+	"github.com/InfluxCommunity/flux/plan/plantest"
+	"github.com/InfluxCommunity/flux/stdlib/influxdata/influxdb"
+	"github.com/InfluxCommunity/flux/stdlib/universe"
 	qinfluxdb "github.com/influxdata/influxdb/flux/stdlib/influxdata/influxdb"
 	"github.com/stretchr/testify/require"
 )

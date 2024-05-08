@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"sync/atomic"
 
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/array"
+	"github.com/InfluxCommunity/flux/arrow"
+	"github.com/InfluxCommunity/flux/execute"
+	"github.com/InfluxCommunity/flux/values"
 	"github.com/apache/arrow/go/arrow/memory"
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/array"
-	"github.com/influxdata/flux/arrow"
-	"github.com/influxdata/flux/execute"
-	"github.com/influxdata/flux/values"
 	"github.com/influxdata/influxdb/kit/platform/errors"
 )
 

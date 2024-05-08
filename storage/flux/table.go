@@ -6,11 +6,11 @@ import (
 	"errors"
 	"sync/atomic"
 
-	"github.com/influxdata/flux"
-	"github.com/influxdata/flux/array"
-	"github.com/influxdata/flux/arrow"
-	"github.com/influxdata/flux/execute"
-	"github.com/influxdata/flux/memory"
+	"github.com/InfluxCommunity/flux"
+	"github.com/InfluxCommunity/flux/array"
+	"github.com/InfluxCommunity/flux/arrow"
+	"github.com/InfluxCommunity/flux/execute"
+	"github.com/InfluxCommunity/flux/memory"
 	"github.com/influxdata/influxdb/models"
 )
 

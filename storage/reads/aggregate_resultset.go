@@ -4,8 +4,8 @@ import (
 	"context"
 	"math"
 
-	"github.com/influxdata/flux/interval"
-	"github.com/influxdata/flux/values"
+	"github.com/InfluxCommunity/flux/interval"
+	"github.com/InfluxCommunity/flux/values"
 	"github.com/influxdata/influxdb/kit/errors"
 	"github.com/influxdata/influxdb/models"
 	"github.com/influxdata/influxdb/storage/reads/datatypes"

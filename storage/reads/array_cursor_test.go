@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/InfluxCommunity/flux/interval"
+	"github.com/InfluxCommunity/flux/values"
 	"github.com/golang/mock/gomock"
 	"github.com/google/go-cmp/cmp"
-	"github.com/influxdata/flux/interval"
-	"github.com/influxdata/flux/values"
 	"github.com/influxdata/influxdb/models"
 	"github.com/influxdata/influxdb/tsdb/cursors"
 	"github.com/influxdata/influxdb/tsdb/cursors/mock"

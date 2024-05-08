@@ -5,6 +5,7 @@ go 1.21
 require (
 	collectd.org v0.3.0
 	github.com/BurntSushi/toml v0.3.1
+	github.com/InfluxCommunity/flux v0.194.3
 	github.com/apache/arrow/go/arrow v0.0.0-20211112161151-bc219186db40
 	github.com/benbjohnson/tmpl v1.1.0
 	github.com/bmizerany/pat v0.0.0-20170815010413-6226ea591a40
@@ -16,10 +17,9 @@ require (
 	github.com/golang/mock v1.6.0
 	github.com/golang/snappy v0.0.4
 	github.com/google/go-cmp v0.6.0
-	github.com/influxdata/flux v0.194.5
 	github.com/influxdata/httprouter v1.3.1-0.20191122104820-ee83e2772f69
 	github.com/influxdata/influxql v1.2.0
-	github.com/influxdata/pkg-config v0.2.11
+	github.com/influxdata/pkg-config v0.2.13
 	github.com/influxdata/roaring v0.4.13-0.20180809181101-fc520f41fab6
 	github.com/influxdata/usage-client v0.0.0-20160829180054-6d3895376368
 	github.com/jsternberg/zap-logfmt v1.2.0

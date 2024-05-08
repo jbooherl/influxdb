@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/InfluxCommunity/flux/execute"
 	"github.com/apache/arrow/go/arrow/memory"
-	"github.com/influxdata/flux/execute"
 )
 
 func TestTagsCache_GetBounds_Concurrency(t *testing.T) {

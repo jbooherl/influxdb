@@ -2,7 +2,7 @@
 
 set -ex
 
-flux_dir=$(go list -m -f '{{.Dir}}' github.com/influxdata/flux)
+flux_dir=$(go list -m -f '{{.Dir}}' github.com/InfluxCommunity/flux)
 FLUX_RUST_VERSION=$(cat ${flux_dir}/Dockerfile_build | grep 'FROM rust:' | cut -d ' ' -f2 | cut -d ':' -f2)
 RUST_LATEST_VERSION=${FLUX_RUST_VERSION:-1.53}
 cd ..
